@@ -1,0 +1,11 @@
+From centos:7
+
+
+Label maintainer ="prapul@gmail.com"
+Run yum install dnf -y
+Run dnf update -y &&\
+    dnf install epel-release -y &&\
+    dnf install nginx -y
+COPY index.html /usr/share/nginx/html
+Expose 80
+CMD ["nginx", "-g", "daemon off;"]

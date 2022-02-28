@@ -1,0 +1,11 @@
+
+FROM alpine:3.4
+
+WORKDIR /project
+RUN  apk update &&\
+apk add vim &&\
+apk add git &&\
+apk add curl
+COPY variables.sh .
+ENTRYPOINT ["echo","Hello world"]
+CMD ["Prapul"]

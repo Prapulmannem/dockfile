@@ -1,0 +1,7 @@
+# This is to create simple dockerfile
+
+FROM alpine:3.4
+RUN  apk update &&\
+ apk add vim &&\
+ apk add git &&\
+ apk add curl
